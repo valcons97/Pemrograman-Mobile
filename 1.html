@@ -1,0 +1,264 @@
+<html>
+<head>
+<meta name =viewport content="width=device-width,initial scale=1">
+	<link rel=stylesheet href="jquery.mobile-1.4.5.css"/>
+	<script src=demos/js/jquery.js></script>
+	<script src=jquery.mobile-1.4.5.js></script>
+	<style>
+#coltext{
+background-color:red;
+width:100px;
+height:100px;
+}
+</style>
+</head>
+<body>
+	<div data-role="page" id=tabkalku>
+		<div data-role="header" data-position="inline" data-theme="b">
+		<h1>Kalkulator</h1>
+		<a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Menu</a>
+			<div data-role="popup" id="popupMenu" data-theme="b">
+				<ul data-role="listview" data-inset="true" style="min-width:210px;">
+					<li data-role="list-divider" >Menu</li>
+					<li><a href=#tabkalku>Kalkulator</a></li>
+					<li><a href=#warna>Warna</a></li>
+					<li><a href=#tabrangkuman>Rangkuman</a></li>
+				</ul>
+			</div>
+
+		</div>
+			<div data-role="content">
+			<ul data-role="listview">
+				<li><a href=#tabkalku>Factorial</a></li>
+				<li><a href=#tabpangkat>Pangkat</a></li>
+			</ul>
+			<br>
+			<div>
+				<form>
+					<label for="input">Inputkan Angka : </label>
+					<input name="input" type="text" id="angka" required class="show-page-loading-msg"></input>
+					
+					<input name="factor" id="submitfact" value="Submit" type="button" />
+					<label for="factor">Hasil Factorial : </label>
+					<input type="text" id="factor"></input>
+				</form>
+			</div>
+			</div>
+		<div data-role=footer data-position=fixed>
+		</div>
+	</div>
+	<div data-role="page" id=tabpangkat>
+		<div data-role="header" data-position="inline" data-theme="b">
+		<h1>Kalkulator</h1>
+		<a href="#popupMenu1" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Menu</a>
+			<div data-role="popup" id="popupMenu1" data-theme="b">
+				<ul data-role="listview" data-inset="true" style="min-width:210px;">
+					<li data-role="list-divider">Menu</li>
+					<li><a href=#tabkalku>Kalkulator</a></li>
+					<li><a href=#warna>Warna</a></li>
+					<li><a href=#tabrangkuman>Rangkuman</a></li>
+				</ul>
+			</div>
+
+		</div>
+			<div data-role="content">
+			<ul data-role="listview">
+				<li><a href=#tabkalku>Factorial</a></li>
+				<li><a href=#tabpangkat>Pangkat</a></li>
+			</ul>
+			<br>
+			<div>
+				<form>
+					<form>
+					<label for="input1">Inputkan Angka : </label>
+					<input name="input1" type="text" id="angka1" required></input>
+					<label for="input2">Inputkan Pangkat : </label>
+					<input name="input2" type="text" id="pangkat1" required></input>
+					
+					<input name="pangkat" id="submitpang" value="Submit" type="button" />
+					<label for="pangkat">Hasil Pangkat : </label>
+					<input type="text" id="pangkathasil"></input>
+				</form>
+				</form>
+			</div>
+			</div>
+		<div data-role=footer data-position=fixed>	
+		</div>
+	</div>
+	<div data-role="page" id=warna>
+	<div data-role="header" data-position="inline" data-theme="b">
+		<h1>Warna</h1>
+		<a href="#popupMenu2" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Menu</a>
+			<div data-role="popup" id="popupMenu2" data-theme="b">
+				<ul data-role="listview" data-inset="true" style="min-width:210px;">
+					<li data-role="list-divider">Menu</li>
+					<li><a href=#tabkalku>Kalkulator</a></li>
+					<li><a href=#warna>Warna</a></li>
+					<li><a href=#tabrangkuman>Rangkuman</a></li>
+				</ul>
+			</div>
+		</div>
+			<div data-role="content">
+			<ul data-role="listview">
+				<li><a href=#warna>Warna</a></li>
+			</ul>
+			<br>
+
+			<div>
+				<form id="TheForm">
+    <input id="color" type="text" />
+    <br/>
+    <input id="submitColor" value="Submit" type="button" />
+</form>
+<div id="coltext"></div>
+			</div>
+			</div>
+			<div data-role="panel" id="mypanel" data-theme="a" data-display="push" data-dismissible="true">
+				<a href="" data-role="button" data-rel="close">CLose Panel</a>
+				<label for="slider-fill">Red : </label>
+				<input type="range" name="slider-fill" id="red" value="60" min="0" max="255" data-highlight="true" />
+				<label for="slider-fill">Green : </label>
+				<input type="range" name="slider-fill" id="green" value="60" min="0" max="255" data-highlight="true" />
+				<label for="slider-fill">Blue : </label>
+				<input type="range" name="slider-fill" id="blue" value="60" min="0" max="255" data-highlight="true" />
+				<form id="TheForm1">
+				<input id="submitColor1" value="Submit" type="button" />
+				</form>
+			</div>
+		<div data-role=footer data-position=fixed>
+			<a href="#mypanel">Open RGB Panel</a>
+		</div>
+	</div>
+		<div data-role="page" id=tabrangkuman>
+		<div data-role="header" data-position="inline" data-theme="b">
+		<h1>Rangkuman</h1>
+		<a href="#popupMenu3" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Menu</a>
+			<div data-role="popup" id="popupMenu3" data-theme="b">
+				<ul data-role="listview" data-inset="true" style="min-width:210px;">
+					<li data-role="list-divider">Menu</li>
+					<li><a href=#tabkalku>Kalkulator</a></li>
+					<li><a href=#warna>Warna</a></li>
+					<li><a href=#tabrangkuman>Rangkuman</a></li>
+				</ul>
+			</div>
+
+		</div>
+			<div data-role="content">
+			<br>
+			<div>
+				Apa yang sudah saya pelajari sejauh ini adalah bagaimana menggunakan jquery mobile, ditambah dengan angular. meskipun angular bisa dibilang sangat sulit karena harus sesuai dan presisi mengikuti kata kata yang sudah ditulis. Jika ada salah satu saja yang salah tulis pasti akan error.
+				<br>
+				Untuk Jquery Mobile bisa dibilang masih gampang, karena semua sudah disediakan secara langsung oleh pihak penyedia. Dengan begitu ketika kita menggunakan role apa saja yang berada di html, maka ia secara otomatis mendesain css dan juga fungsi-nya. Bisa dibilang Jquery Mobile ini sangat membantu saya, apalagi waktu tes.
+				<br>
+				Selanjutnya saya juga belajar tentang github. Githuba sangat membantu karena dengan adanya ini dia memberikan kesempatan untuk mengerjakan ulang dan memberikan panduan jika kerja kelompok dan ada yang melakukan perubahan. dengan begitu github sangat efisien dan reliable.
+				<br><br>
+				<table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+    <thead>
+      <tr class="ui-bar-d">
+        <th>Pelajaran yang sudah didapat</th>
+        <th data-priority="2">Kesulitan 1-10</th>
+        <th data-priority="1">Rating</abbr></th>
+        <th data-priority="3">Keahlian 1-10</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>Github</td>
+        <td>2</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>Jquery Mobile</td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>Angular</td>
+        <td>8</td>
+        <td>5</td>
+      </tr>
+    </tbody>
+  </table>
+			</div>
+			</div>
+		<div data-role=footer data-position=fixed>
+		</div>
+	</div>
+	<div data-role="page" id=warna>
+	<div data-role="header" data-position="inline" data-theme="b">
+		
+		
+	<script>
+	function factorial()
+	{
+		var inputNumber = document.getElementById("angka").value;
+		var total = 1;
+
+		for (i = 0; i < inputNumber; i++)
+		{
+			total = total * (inputNumber - i);
+		}
+	document.getElementById("factor").value=total;
+		
+	}
+	function pangkat()
+	{
+		var inputNumber = document.getElementById("angka1").value;
+		var pangkat=document.getElementById("pangkat1").value;
+		var a1=parseInt(inputNumber);
+		var a2=parseInt(pangkat);
+		total=Math.pow(a1,a2);
+		document.getElementById("pangkathasil").value=total;
+	}
+	function changeBackground() {
+
+    var names = ["AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure", "Beige", "Bisque", "Black", "BlanchedAlmond", "Blue", "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse", "Chocolate", "Coral", "CornflowerBlue", "Cornsilk", "Crimson", "Cyan", "DarkBlue", "DarkCyan", "DarkGoldenRod", "DarkGray", "DarkGrey", "DarkGreen", "DarkKhaki", "DarkMagenta", "DarkOliveGreen", "Darkorange", "DarkOrchid", "DarkRed", "DarkSalmon", "DarkSeaGreen", "DarkSlateBlue", "DarkSlateGray", "DarkSlateGrey", "DarkTurquoise", "DarkViolet", "DeepPink", "DeepSkyBlue", "DimGray", "DimGrey", "DodgerBlue", "FireBrick", "FloralWhite", "ForestGreen", "Fuchsia", "Gainsboro", "GhostWhite", "Gold", "GoldenRod", "Gray", "Grey", "Green", "GreenYellow", "HoneyDew", "HotPink", "IndianRed", "Indigo", "Ivory", "Khaki", "Lavender", "LavenderBlush", "LawnGreen", "LemonChiffon", "LightBlue", "LightCoral", "LightCyan", "LightGoldenRodYellow", "LightGray", "LightGrey", "LightGreen", "LightPink", "LightSalmon", "LightSeaGreen", "LightSkyBlue", "LightSlateGray", "LightSlateGrey", "LightSteelBlue", "LightYellow", "Lime", "LimeGreen", "Linen", "Magenta", "Maroon", "MediumAquaMarine", "MediumBlue", "MediumOrchid", "MediumPurple", "MediumSeaGreen", "MediumSlateBlue", "MediumSpringGreen", "MediumTurquoise", "MediumVioletRed", "MidnightBlue", "MintCream", "MistyRose", "Moccasin", "NavajoWhite", "Navy", "OldLace", "Olive", "OliveDrab", "Orange", "OrangeRed", "Orchid", "PaleGoldenRod", "PaleGreen", "PaleTurquoise", "PaleVioletRed", "PapayaWhip", "PeachPuff", "Peru", "Pink", "Plum", "PowderBlue", "Purple", "Red", "RosyBrown", "RoyalBlue", "SaddleBrown", "Salmon", "SandyBrown", "SeaGreen", "SeaShell", "Sienna", "Silver", "SkyBlue", "SlateBlue", "SlateGray", "SlateGrey", "Snow", "SpringGreen", "SteelBlue", "Tan", "Teal", "Thistle", "Tomato", "Turquoise", "Violet", "Wheat", "White", "WhiteSmoke", "Yellow", "YellowGreen"],
+        color = document.getElementById("color").value.trim(),
+        rxValidHex = /^#(?:[0-9a-f]{3}){1,2}$/i,
+        formattedName = color.charAt(0).toUpperCase() + color.slice(1).toLowerCase();
+		if(rxValidHex.test(formattedName))
+		{
+			hexToRgb();
+		}
+		else{
+		document.getElementById("red").value="-";
+		document.getElementById("green").value="-";
+		document.getElementById("blue").value="-";
+		}
+    if (names.indexOf(formattedName) !== -1 || rxValidHex.test(color)) {
+        document.getElementById("coltext").style.backgroundColor = color;
+    } else {
+        alert("Invalid CSS Color");
+    }
+}
+function hexToRgb() {
+	hex=document.getElementById("color").value;
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        r= parseInt(result[1], 16);
+        g= parseInt(result[2], 16);
+        b= parseInt(result[3], 16);
+	document.getElementById("red").value=r;
+	document.getElementById("green").value=g;
+	document.getElementById("blue").value=b;
+
+}
+
+function rgbToHex() {
+
+	r=parseInt(document.getElementById("red").value);
+	g=parseInt(document.getElementById("green").value);
+	b=parseInt(document.getElementById("blue").value);
+    hasil= "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+	document.getElementById("coltext").style.backgroundColor = hasil;
+	document.getElementById("color").value = hasil;
+}
+document.getElementById("submitColor1").addEventListener("click", rgbToHex, false);
+document.getElementById("submitColor").addEventListener("click", changeBackground, false);
+	document.getElementById("submitfact").addEventListener("click", factorial, false);
+	document.getElementById("submitpang").addEventListener("click", pangkat, false);
+	</script>	
+</body>
+</html>
